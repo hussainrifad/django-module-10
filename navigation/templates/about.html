@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About</title>
 </head>
-<body>
-    <ul style="list-style: none; display: flex; text-decoration: none; gap: 10px;">
-        <li><a href="/navigation/">Home</a></li>
-        <li><a href="/navigation/about/">About</a></li>
-        <li><a href="/navigation/contact/">Contact</a></li>
-    </ul>
-    This is About Page
+<body style="font-size: large; font-weight: 600; font-family: monospace;">
+    <div>
+        {% include 'header.html' %}
+    </div>
+    <div>
+        <p>
+            Student life is one of the most memorable phases of a person’s life. The phase of student life builds the foundation of our life. In student life, we do not just learn from books. We learn to grow emotionally, physically, philosophically as well as socially. Thus, in this student life essay, we will learn its essence and importance.
+        </p>
+        <br>
+        <p>
+            Similarly, rushing to the bus stop is very exciting during student life. The mothers constantly remind us to hurry up and not be late. It is no less than a mantra for all mothers.
+        </p>
+        <p>
+            You get to enjoy yourself and have a  lot of fun. Even waiting for the exam result with friends becomes fun. The essence of student life lies in the little things like getting curious about your friend’s marks, getting jealous if they score more, and so on.
+        </p>
+    </div>
+    <div>
+        {% include 'footer.html'%}
+    </div>
 </body>
 </html>

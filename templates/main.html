@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Main</title>
 </head>
-<body>
-    <ul style="list-style: none; display: flex; text-decoration: none; gap: 10px;">
-        <li><a href="/navigation/">Home</a></li>
-        <li><a href="/navigation/about/">About</a></li>
-        <li><a href="/navigation/contact/">Contact</a></li>
-    </ul>
-    This is Main page
+<body style="margin: 0px 5rem;">
+    <div>
+        {% include 'header.html'%}
+    </div>
+    <div>
+        <div style="font-size: large; font-family: monospace; font-weight: bolder;">Total Players : {{total_players}} </div> 
+        {% for i in playerList|dictsort:'age' %}
+            <div style="border: solid 1px; margin: 10px 0px; padding: 5px;">
+                <p style="font-weight: 700; font-size: larger; font-family: monospace;">{{i.name}}, age : {{i.age}}, living in : {{i.address}}</p>
+                <p style="font-family: monospace; font-size: large;">{{i.description | truncatechars:300}}</p>
+                <p style="font-family: monospace">{{i.recentDate | date}}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <div>
+        {% include 'footer.html' %}
+    </div>
 </body>
 </html>

@@ -9,4 +9,12 @@ def about(request):
     return render(request, 'about.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    contact = {
+        'branch' : 'London',
+        'contact_list' : [
+            '121331',
+            '121332',
+            '321331'
+        ]
+    }
+    return render(request, 'contact.html', contact)
